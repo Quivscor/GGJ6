@@ -6,23 +6,23 @@ public class NPC : MonoBehaviour
 {
     public float throwSpeed;
 
-    private string _type;
-    private int _score;
+    public string type;
+    public int score;
 
     public string Type
     {
-        private set => _type = value;
+        set => type = value;
         get
         {
-            return _type;
+            return type;
         }
     }
     public int Score
     {
-        private set => _score = value;
+        set => score = value;
         get
         {
-            return _score;
+            return score;
         }
     }
     private bool _isPickedUp = false;
@@ -55,7 +55,7 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.SendMessage("OnGettingHit", _type);
+            collision.gameObject.SendMessage("OnGettingHit", Type);
         }
         if(collision.gameObject.CompareTag("Map"))
         {
