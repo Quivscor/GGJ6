@@ -39,7 +39,7 @@ public class ThrowScript : MonoBehaviour
                     {
                         if (colliders[i].gameObject.GetComponent<NPC>()._isThrown == false)
                         {
-                            Debug.Log("Got NPC");
+                            //Debug.Log("Got NPC");
                             NPC npcScript = colliders[i].GetComponent<NPC>();
                             if (npcScript._isThrown == false && npcScript._isPickedUp == false)
                             {
@@ -58,7 +58,7 @@ public class ThrowScript : MonoBehaviour
             }
             else if(holdsSth == true)
             {
-                Debug.Log("Player" + playerNumber+ "throws held NPC");
+                //Debug.Log("Player" + playerNumber+ "throws held NPC");
                 HeldGameObject.transform.position = this.gameObject.transform.position;
                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = true;
                 HeldGameObject.transform.SetParent(this.gameObject.transform.parent, true);
@@ -73,7 +73,7 @@ public class ThrowScript : MonoBehaviour
     }
     public void OnGettingHit(string type)
     {
-        Debug.Log("Player hit by " + type);
+        //Debug.Log("Player hit by " + type);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

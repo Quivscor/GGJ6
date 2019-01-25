@@ -16,15 +16,15 @@ public class NPC : MonoBehaviour
 
         get
         {
-            return type;
+            return _type;
         }
     }
     public int Score
     {
-        set => score = value;
+        set => _score = value;
         get
         {
-            return score;
+            return _score;
         }
     }
     public bool _isPickedUp = false;
@@ -37,7 +37,7 @@ public class NPC : MonoBehaviour
         _sprite = this.gameObject.transform.Find("Sprite").gameObject;
         if(_sprite == null)
         {
-            Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
+            //Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
         }
     }
     public void OnPickUp(int _newOwner)
@@ -68,7 +68,7 @@ public class NPC : MonoBehaviour
                 if (_isPickedUp == false && _isThrown == false)
                 {
                     ownerPLayer = collision.GetComponent<ThrowScript>().playerNumber;
-                    Debug.Log("NPC can be picked up by " + ownerPLayer.ToString());
+                    //Debug.Log("NPC can be picked up by " + ownerPLayer.ToString());
                 }
             }
             
