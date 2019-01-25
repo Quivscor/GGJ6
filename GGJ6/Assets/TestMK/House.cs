@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    private int score = 0;
-
-    public int GetScore()
-    {
-        return score;
-    }
+    public int Score { get; set; }
 
     void UpdateScore(int amount)
     {
-        if ((score - amount) >= 0)
+        if ((Score - amount) >= 0)
         {
-            score += amount;
+            Score += amount;
         }
-
+        else
+        {
+            Score = 0;
+        }
     }
 
     private bool hasFemale;
@@ -64,8 +62,8 @@ public class House : MonoBehaviour
 
     void UpdateStats(NPC npc)
     {
-        UpdateHousehold(npc.GetType());
-        UpdateScore(npc.GetScore());
+        UpdateHousehold(npc.Type);
+        UpdateScore(npc.Score);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -80,6 +78,8 @@ public class House : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Score = 0;
+
         isFullSet = false;
 
         hasFemale = false;
