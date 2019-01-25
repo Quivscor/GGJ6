@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    //NOTE: remove after implementation !!!
-    public class NPC : MonoBehaviour  { public int GetScore( ) { return 1; } public string GetType() { return "d"; } }
-    public class Player { }
-    //NOTE: REMOVE ^^^^^^^^^^^^^^^^^^^^^^^^^
-
     private int score = 0;
 
     public int GetScore()
