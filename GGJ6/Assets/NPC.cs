@@ -13,17 +13,18 @@ public class NPC : MonoBehaviour
     public string Type
     {
         set => _type = value;
+
         get
         {
-            return _type;
+            return type;
         }
     }
     public int Score
     {
-        private set => _score = value;
+        set => score = value;
         get
         {
-            return _score;
+            return score;
         }
     }
     public bool _isPickedUp = false;
@@ -55,6 +56,7 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             if (collision.gameObject.GetComponent<ThrowScript>().playerNumber != ownerPLayer)
             {
                 if (_isThrown)
@@ -71,6 +73,7 @@ public class NPC : MonoBehaviour
             }
             
            
+
         }
         if(collision.gameObject.CompareTag("Map"))
         {
