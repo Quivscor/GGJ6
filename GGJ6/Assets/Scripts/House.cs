@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
+
+    public delegate void ScoreChange();
+    public static event ScoreChange OnChanged;
+
     public int Score { get; set; }
 
     void UpdateScore(int amount)
@@ -64,6 +68,9 @@ public class House : MonoBehaviour
     {
         UpdateHousehold(npc.Type);
         UpdateScore(npc.Score);
+
+        OnChanged?.Invoke();
+
         Debug.Log(Score);
     }
 
@@ -88,8 +95,6 @@ public class House : MonoBehaviour
         hasChild  = false;
         hasMale   = false;
         hasPet    = false;
-
-        //Owner = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
