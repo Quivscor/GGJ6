@@ -22,16 +22,16 @@ public class House : MonoBehaviour
         }
     }
 
-    private bool hasFemale;
-    private bool hasChild;
-    private bool hasMale;
-    private bool hasPet;
+    public bool hasFemale;
+    public bool hasChild;
+    public bool hasMale;
+    public bool hasPet;
 
     // is there a complete set of family members?
     // types: pet, female, male, child
     private bool isFullSet;
 
-    bool IsFullSet()
+    public bool IsFullSet()
     {
         return isFullSet;
     }
