@@ -48,4 +48,9 @@ public class WaveManager : MonoBehaviour
         }
         return false;
     }
+
+    public void RemoveNPC(GameObject npc)
+    {
+        activeNPCs.Remove(npc);
+    }
 }

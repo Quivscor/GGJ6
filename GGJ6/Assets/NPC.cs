@@ -79,7 +79,13 @@ public class NPC : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             _isThrown = false;
             ownerPLayer = 99999;
-            Destroy(this.gameObject); 
+            Remove();
+        }
+
+        void Remove()
+        {
+            GameObject.Find("WaveManager").SendMessage("RemoveNPC", this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
