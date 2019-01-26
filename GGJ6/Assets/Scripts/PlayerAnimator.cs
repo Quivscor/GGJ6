@@ -30,7 +30,7 @@ public class PlayerAnimator : MonoBehaviour
 
         //Debug.Log("Direction = " + direction);
         animator.SetInteger("direction", direction);
-        animator.SetBool("isMoving", true);
+        animator.SetBool("isMoving", controller.isMoving);
 
         if (throwing.holdsSth)
         {
