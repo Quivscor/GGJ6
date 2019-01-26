@@ -8,14 +8,7 @@ public class House : MonoBehaviour
 
     void UpdateScore(int amount)
     {
-        if ((Score - amount) >= 0)
-        {
-            Score += amount;
-        }
-        else
-        {
-            Score = 0;
-        }
+        Score += amount;
     }
 
     private bool hasFemale;
@@ -64,14 +57,16 @@ public class House : MonoBehaviour
     {
         UpdateHousehold(npc.Type);
         UpdateScore(npc.Score);
+        Debug.Log(Score);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "NPC")
+        if (collision.gameObject.tag == "NPC")
         {
+            Debug.Log("Hit da house!");
             UpdateStats(collision.gameObject.GetComponent<NPC>());
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<NPC>().Remove();
         }
     }
 
@@ -93,6 +88,5 @@ public class House : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
