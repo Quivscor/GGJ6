@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     public Vector2 directionVector2;
     private float speed = 2.0f;
     private ThrowScript throwScript= null;
+    public bool isMoving = false;
 
     public GameObject pickedUpPerson;
     // Start is called before the first frame update
@@ -27,7 +28,12 @@ public class MovementController : MonoBehaviour
             body.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal" + throwScript.playerNumber) * speed, 1f), Mathf.Lerp(0, Input.GetAxis("Vertical" + throwScript.playerNumber) * speed, 1f));
             if (Input.GetAxis("Horizontal"+ throwScript.playerNumber) != 0.0f || Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
             {
+                isMoving = true;
                 directionVector2 = new Vector2(Input.GetAxis("Horizontal" + throwScript.playerNumber), Input.GetAxis("Vertical" + throwScript.playerNumber)).normalized;
+            }
+            else if(Input.GetAxis("Horizontal" + throwScript.playerNumber) != 0.0f && Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
+            {
+                isMoving = false;
             }
         }
         else
