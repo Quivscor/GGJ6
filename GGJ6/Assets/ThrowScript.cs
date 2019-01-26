@@ -16,14 +16,17 @@ public class ThrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    movementController = GetComponent<MovementController>();
+        movementController = GetComponent<MovementController>();
+        DirLine.transform.localPosition = new Vector2(0,-1) * 0.39f + new Vector2(0, -0.59f);
+        DirLine.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.left, Vector2.down));
+        movementController.directionVector2 = new Vector2(0, -1);
         Debug.Log("Action" + playerNumber);
     }
 
     // Update is called once per frame
     void Update()
     {
-        DirLine.transform.localPosition = movementController.directionVector2 * 0.35f + new Vector2(0,-0.55f);
+        DirLine.transform.localPosition = movementController.directionVector2 * 0.39f + new Vector2(0,-0.59f);
         DirLine.transform.rotation = Quaternion.Euler(0,0,Vector2.SignedAngle(Vector2.left, movementController.directionVector2));
 
         if (Input.GetButtonDown("Action" + playerNumber)&&!_isStunned)
