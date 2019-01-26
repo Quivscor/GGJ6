@@ -28,7 +28,7 @@ public class PlayerAnimator : MonoBehaviour
         else if (controller.directionVector2.y < -0.5f && controller.directionVector2.x > -0.5f && controller.directionVector2.x < 0.5f)
             direction = 3;
 
-        Debug.Log("Direction = " + direction);
+        //Debug.Log("Direction = " + direction);
 
         if (throwing.holdsSth)
         {
