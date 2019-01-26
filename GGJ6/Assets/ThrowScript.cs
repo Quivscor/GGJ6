@@ -17,6 +17,7 @@ public class ThrowScript : MonoBehaviour
     {
         movementController = GetComponent<MovementController>();
         Debug.Log("Action" + playerNumber);
+       
     }
 
     // Update is called once per frame
@@ -73,8 +74,15 @@ public class ThrowScript : MonoBehaviour
     }
     public void OnGettingHit(string type)
     {
-        Debug.Log("Player hit by " + type);
+        Debug.Log("Player" + playerNumber + " hit by " + type);
+        
+        if (type == "uselessFat")
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
         StartCoroutine(GetStunned(2.0f));
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -99,6 +107,7 @@ public class ThrowScript : MonoBehaviour
 
         }
         yield return new WaitForSeconds(seconds);
+        this.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         _isStunned = false;
     }
 
