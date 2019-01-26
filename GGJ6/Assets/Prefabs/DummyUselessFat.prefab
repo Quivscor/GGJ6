@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 8208918096594405663}
   - component: {fileID: 3556539908923435831}
   m_Layer: 0
-  m_Name: DummyUseless
+  m_Name: DummyUselessFat
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 394eae4785a92954b984d469e0f389bc, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
