@@ -7,9 +7,11 @@ public class NPC : MonoBehaviour
     
     public float throwSpeed = 200f;
     public string _type = "simple";
-    private int _score;
+
+    private int _score = 50;
     public int ownerPLayer = 9999;
     public int _bouncesLeft = 3;
+
 
     public string Type
     {
@@ -40,6 +42,8 @@ public class NPC : MonoBehaviour
         {
             //Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
         }
+        if (Type == "useless")
+            Score = 0;
     }
     public void OnPickUp(int _newOwner)
     {
@@ -119,6 +123,7 @@ public class NPC : MonoBehaviour
 
 
         }
+    }
 
         
     }
