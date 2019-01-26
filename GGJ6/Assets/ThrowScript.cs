@@ -46,7 +46,7 @@ public class ThrowScript : MonoBehaviour
         {
             if (holdsSth == false)
             {
-                this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
+                
                 Collider2D[] colliders = new Collider2D[10];
                 Collider2D myCollider = gameObject.GetComponent<Collider2D>();
                 ContactFilter2D contactFilter = new ContactFilter2D();
@@ -63,6 +63,7 @@ public class ThrowScript : MonoBehaviour
                             NPC npcScript = colliders[i].GetComponent<NPC>();
                             if (npcScript._isThrown == false && npcScript._isPickedUp == false)
                             {
+                                this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
                                 HeldGameObject = colliders[i].gameObject;
                                 HeldGameObject.SendMessage("OnPickUp",playerNumber);
                                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = false;
