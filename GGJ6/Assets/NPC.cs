@@ -56,13 +56,12 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            
             if (collision.gameObject.GetComponent<ThrowScript>().playerNumber != ownerPLayer)
             {
                 if (_isThrown)
                 {
                     collision.gameObject.SendMessage("OnGettingHit", _type);
-
                 }
 
                 if (_isPickedUp == false && _isThrown == false)
@@ -80,6 +79,7 @@ public class NPC : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             _isThrown = false;
             ownerPLayer = 99999;
+            Destroy(this.gameObject); 
         }
     }
 }

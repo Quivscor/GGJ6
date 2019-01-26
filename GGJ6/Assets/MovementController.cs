@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     
-    Rigidbody2D body;
+    public Rigidbody2D body;
     public Vector2 directionVector2;
     private float speed = 2.0f;
     private ThrowScript throwScript= null;
@@ -29,6 +29,10 @@ public class MovementController : MonoBehaviour
             {
                 directionVector2 = new Vector2(Input.GetAxis("Horizontal" + throwScript.playerNumber), Input.GetAxis("Vertical" + throwScript.playerNumber)).normalized;
             }
+        }
+        else
+        {
+            body.velocity=Vector2.zero;
         }
         
 
