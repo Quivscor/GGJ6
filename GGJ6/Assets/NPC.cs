@@ -52,6 +52,12 @@ public class NPC : MonoBehaviour
 
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * throwSpeed);
     }
+    public void OnDrop()
+    {
+        _isPickedUp = false;
+        _isThrown = false;
+        ownerPLayer = 99999;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
