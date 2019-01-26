@@ -30,7 +30,7 @@ public class Hud : MonoBehaviour
         {
             foreach(House h in houses)
             {
-                if(h.Owner.playerNumber == 1)
+                if(h.Owner.playerNumber == 4)
                 {
                     hud1.GetComponent<PlayerHud>().House = h;
                     hud1.GetComponent<PlayerHud>().InitDisplayData();
@@ -42,7 +42,7 @@ public class Hud : MonoBehaviour
         {
             foreach (House h in houses)
             {
-                if (h.Owner.playerNumber == 2)
+                if (h.Owner.playerNumber == 1)
                 {
                     hud2.GetComponent<PlayerHud>().House = h;
                     hud2.GetComponent<PlayerHud>().InitDisplayData();
@@ -66,7 +66,7 @@ public class Hud : MonoBehaviour
         {
             foreach (House h in houses)
             {
-                if (h.Owner.playerNumber == 4)
+                if (h.Owner.playerNumber == 2)
                 {
                     hud4.GetComponent<PlayerHud>().House = h;
                     hud4.GetComponent<PlayerHud>().InitDisplayData();
