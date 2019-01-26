@@ -124,16 +124,13 @@ public class NPC : MonoBehaviour
 
         }
     }
-
-        
-    }
-    void Remove()
+    public void Remove()
     {
         GameObject.Find("WaveManager").SendMessage("RemoveNPC", this.gameObject);
         Destroy(this.gameObject);
     }
 
-    void Bounce()
+    public void Bounce()
     {
 
         if (_bouncesLeft > 0)
@@ -146,9 +143,5 @@ public class NPC : MonoBehaviour
         {
             Remove();
         }
-
-
     }
-
-
 }
