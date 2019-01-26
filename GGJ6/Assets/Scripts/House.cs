@@ -8,7 +8,7 @@ public class House : MonoBehaviour
 
     void UpdateScore(int amount)
     {
-        if ((Score - amount) >= 0)
+        if ((Score + amount) >= 0)
         {
             Score += amount;
         }
