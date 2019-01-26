@@ -91,6 +91,7 @@ public class NPC : MonoBehaviour
                 if (_type == "uselessFat" && _isThrown)
                 {
                     Bounce();
+                    collision.gameObject.SendMessage("OnGettingHit", _type);
                 }
                 if (_isThrown)
                 {

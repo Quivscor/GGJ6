@@ -126,7 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeed: 100
-  _type: useless
+  _type: uselessFat
+  ownerPLayer: 9999
+  _bouncesLeft: 3
   _isPickedUp: 0
   _isThrown: 0
 --- !u!50 &8208918096594405663
@@ -159,7 +161,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8137763823422728462}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 394eae4785a92954b984d469e0f389bc, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
