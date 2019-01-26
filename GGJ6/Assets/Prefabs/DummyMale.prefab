@@ -125,8 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0544b1c5bd2ce449b2408b3736396fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 100
+  throwSpeed: 250
   _type: male
+  ownerPLayer: 9999
+  _bouncesLeft: 3
   _isPickedUp: 0
   _isThrown: 0
 --- !u!50 &5769620924118062838
