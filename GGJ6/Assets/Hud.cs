@@ -26,37 +26,59 @@ public class Hud : MonoBehaviour
     {
         houses = GameObject.FindObjectsOfType<House>();
 
-
-
         if (hud1 != null && houses.Length >= 1)
         {
-            hud1.GetComponent<PlayerHud>().House = houses[0];
-            hud1.GetComponent<PlayerHud>().InitDisplayData();
+            foreach(House h in houses)
+            {
+                if(h.Owner.playerNumber == 1)
+                {
+                    hud1.GetComponent<PlayerHud>().House = h;
+                    hud1.GetComponent<PlayerHud>().InitDisplayData();
+                }
+            }
         }
 
         if (hud2 != null && houses.Length >= 2)
         {
-            hud2.GetComponent<PlayerHud>().House = houses[1];
-            hud2.GetComponent<PlayerHud>().InitDisplayData();
+            foreach (House h in houses)
+            {
+                if (h.Owner.playerNumber == 2)
+                {
+                    hud2.GetComponent<PlayerHud>().House = h;
+                    hud2.GetComponent<PlayerHud>().InitDisplayData();
+                }
+            }
         }
 
         if (hud3 != null && houses.Length >= 3)
         {
-            hud3.GetComponent<PlayerHud>().House = houses[2];
-            hud3.GetComponent<PlayerHud>().InitDisplayData();
+            foreach (House h in houses)
+            {
+                if (h.Owner.playerNumber == 3)
+                {
+                    hud3.GetComponent<PlayerHud>().House = h;
+                    hud3.GetComponent<PlayerHud>().InitDisplayData();
+                }
+            }
         }
 
         if (hud3 != null && houses.Length >= 4)
         {
-            hud4.GetComponent<PlayerHud>().House = houses[3];
-            hud4.GetComponent<PlayerHud>().InitDisplayData();
+            foreach (House h in houses)
+            {
+                if (h.Owner.playerNumber == 4)
+                {
+                    hud4.GetComponent<PlayerHud>().House = h;
+                    hud4.GetComponent<PlayerHud>().InitDisplayData();
+                }
+            }
         }
 
         // if there is no house for a player, hide UI
-        if (hud1.GetComponent<PlayerHud>().House == null) hud1.SetActive(true);
-        if (hud2.GetComponent<PlayerHud>().House == null) hud2.SetActive(true);
-        if (hud3.GetComponent<PlayerHud>().House == null) hud3.SetActive(true);
-        if (hud4.GetComponent<PlayerHud>().House == null) hud4.SetActive(true);
+        //if (hud1.GetComponent<PlayerHud>().House == null) hud1.SetActive(false);
+        //if (hud2.GetComponent<PlayerHud>().House == null) hud2.SetActive(false);
+        //if (hud3.GetComponent<PlayerHud>().House == null) hud3.SetActive(false);
+        //if (hud4.GetComponent<PlayerHud>().House == null) hud4.SetActive(false);
     }
 
     // Start is called before the first frame update
