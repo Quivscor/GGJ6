@@ -55,4 +55,10 @@ public class PlayerAnimator : MonoBehaviour
             }
         }
     }
+
+    public void CarryState()
+    {
+        animator.SetBool("pickup", true);
+        animator.Play("PickUp");
+    }
 }

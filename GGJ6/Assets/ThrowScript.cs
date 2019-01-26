@@ -28,6 +28,7 @@ public class ThrowScript : MonoBehaviour
         {
             if (holdsSth == false)
             {
+                this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
                 Collider2D[] colliders = new Collider2D[10];
                 Collider2D myCollider = gameObject.GetComponent<Collider2D>();
                 ContactFilter2D contactFilter = new ContactFilter2D();
