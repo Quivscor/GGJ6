@@ -16,7 +16,7 @@ public class ThrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movementController = GetComponent<MovementController>();
+    movementController = GetComponent<MovementController>();
         Debug.Log("Action" + playerNumber);
     }
 
