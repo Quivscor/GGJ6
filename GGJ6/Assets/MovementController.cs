@@ -26,28 +26,39 @@ public class MovementController : MonoBehaviour
     {
         if (!throwScript._isStunned)
         {
+            Vector2 temVel = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal" + throwScript.playerNumber) * speed, 1f), Mathf.Lerp(0, Input.GetAxis("Vertical" + throwScript.playerNumber) * speed, 1f));
+            if (throwScript.playerNumber > 2)
+            {
+                if (temVel == Vector2.zero)
+                {
+                    temVel = new Vector2(Mathf.Lerp(0, Input.GetAxisRaw("Horizontal" + throwScript.playerNumber + "Key") * speed, 1f), Mathf.Lerp(0, Input.GetAxisRaw("Vertical" + throwScript.playerNumber + "Key") * speed, 1f));
+                    Debug.Log("wololo" + throwScript.playerNumber);
+                }
+            }
             if (!_invertMovement)
             {
-                body.velocity = new Vector2(Mathf.Lerp(0, Input.GetAxis("Horizontal" + throwScript.playerNumber) * speed, 1f), Mathf.Lerp(0, Input.GetAxis("Vertical" + throwScript.playerNumber) * speed, 1f));
-                if (Input.GetAxis("Horizontal" + throwScript.playerNumber) != 0.0f || Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
+                
+                body.velocity = temVel;
+               
+                if (temVel != Vector2.zero)
                 {
                     isMoving = true;
-                    directionVector2 = new Vector2(Input.GetAxis("Horizontal" + throwScript.playerNumber), Input.GetAxis("Vertical" + throwScript.playerNumber)).normalized;
+                    directionVector2 = temVel.normalized;
                 }
-                else if (Input.GetAxis("Horizontal" + throwScript.playerNumber) == 0.0f && Input.GetAxis("Vertical" + throwScript.playerNumber) == 0.0f)
+                else if (temVel == Vector2.zero)
                 {
                     isMoving = false;
                 }
             }
             else
             {
-                body.velocity = new Vector2(-Mathf.Lerp(0, Input.GetAxis("Horizontal" + throwScript.playerNumber) * speed, 1f), -Mathf.Lerp(0, Input.GetAxis("Vertical" + throwScript.playerNumber) * speed, 1f));
-                if (Input.GetAxis("Horizontal" + throwScript.playerNumber) != 0.0f || Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
+                body.velocity = -temVel;
+                if (temVel != Vector2.zero)
                 {
                     isMoving = true;
-                    directionVector2 = new Vector2(-Input.GetAxis("Horizontal" + throwScript.playerNumber), -Input.GetAxis("Vertical" + throwScript.playerNumber)).normalized;
+                    directionVector2 = temVel.normalized;
                 }
-                else if (Input.GetAxis("Horizontal" + throwScript.playerNumber) != 0.0f && Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
+                else if (temVel==Vector2.zero)
                 {
                     isMoving = false;
                 }
