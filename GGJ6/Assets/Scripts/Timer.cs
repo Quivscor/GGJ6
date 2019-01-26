@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
             int minutes = (int)timeInSeconds / 60;
             string fillerZero = ((int)timeInSeconds % 60) > 9 ? "" : "0";
             time = minutes.ToString() + ":" + fillerZero + ((int)timeInSeconds % 60).ToString();
-            Debug.Log(time);
+            //Debug.Log(time);
         }
     }
 }

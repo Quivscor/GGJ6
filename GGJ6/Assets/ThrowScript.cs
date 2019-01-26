@@ -35,9 +35,14 @@ public class ThrowScript : MonoBehaviour
             DirLine.transform.localPosition = movementController.directionVector2 * 0.39f + new Vector2(0, -0.59f);
             DirLine.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.left, movementController.directionVector2));
         }
-        
 
-        if (Input.GetButtonDown("Action" + playerNumber)&&!_isStunned)
+        bool temInput = Input.GetButtonDown("Action" + playerNumber);
+        if (!temInput && playerNumber > 2)
+        {
+            temInput = Input.GetButtonDown("Action" + playerNumber + "Key");
+        }
+
+        if (temInput&&!_isStunned)
         {
             if (holdsSth == false)
             {

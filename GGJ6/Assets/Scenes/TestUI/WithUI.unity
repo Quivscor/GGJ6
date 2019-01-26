@@ -210,6 +210,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   uselessCount: 3
+  spawnSmoke: {fileID: 0}
 --- !u!1001 &344932204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   uselessCount: 3
+  spawnSmoke: {fileID: 0}
 --- !u!1001 &1023968327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,6 +990,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   uselessCount: 3
+  spawnSmoke: {fileID: 0}
 --- !u!1001 &1055721110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,7 +1133,8 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1177516214, guid: e2c7b259a2ecfd34a8138b5db4720a74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2c7b259a2ecfd34a8138b5db4720a74, type: 3}
 --- !u!1 &1170871896
 GameObject:
@@ -1193,24 +1197,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1177516209 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8471961560379224348, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-    type: 3}
-  m_PrefabInstance: {fileID: 1055721110}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1177516214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177516209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d62a9f273c05d44eaed4a418ce19ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1293957193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1779,6 +1765,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   uselessCount: 3
+  spawnSmoke: {fileID: 0}
 --- !u!1 &1934654247
 GameObject:
   m_ObjectHideFlags: 0
