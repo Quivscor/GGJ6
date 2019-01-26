@@ -32,7 +32,7 @@ public class PlayerHud : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        
     }
 
     public void InitDisplayData()
@@ -62,6 +62,7 @@ public class PlayerHud : MonoBehaviour
         }
 
         playerName.text = "Player " + House.Owner.playerNumber;
+        playerName.color = House.GetComponent<SpriteRenderer>().color;
         playerScore.text = 0.ToString();
 
         Component[] familyIcons;
@@ -96,8 +97,8 @@ public class PlayerHud : MonoBehaviour
         //hasMale.sprite = Resources.Load<Sprite>("FamilyIcons/t1");
         //hasFemale.sprite = Resources.Load<Sprite>("FamilyIcons/m1");
         //hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p1");
-
-        gameObject.SetActive(true);
+        //gameObject.SetActive(false);
+        //gameObject.SetActive(true);
     }
 
     void OnEnable()
