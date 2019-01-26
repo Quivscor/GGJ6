@@ -74,7 +74,8 @@ public class ThrowScript : MonoBehaviour
     }
     public void OnGettingHit(string type)
     {
-        //Debug.Log("Player hit by " + type);
+        Debug.Log("Player hit by " + type);
+        StartCoroutine(GetStunned(2.0f));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -87,6 +88,7 @@ public class ThrowScript : MonoBehaviour
     {
 
         _isStunned = true;
+        movementController.body.velocity = (Vector2.zero);
         yield return new WaitForSeconds(seconds);
         _isStunned = false;
     }
