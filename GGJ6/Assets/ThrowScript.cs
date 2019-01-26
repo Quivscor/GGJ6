@@ -17,13 +17,14 @@ public class ThrowScript : MonoBehaviour
     void Start()
     {
         movementController = GetComponent<MovementController>();
+        Debug.Log("Action" + playerNumber);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Input.GetButtonDown("Fire1")&&!_isStunned)
+        if (Input.GetButtonDown("Action" + playerNumber)&&!_isStunned)
         {
             if (holdsSth == false)
             {
