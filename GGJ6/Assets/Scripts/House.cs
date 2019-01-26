@@ -58,7 +58,9 @@ public class House : MonoBehaviour
 
         if (hasFemale && hasMale && hasChild && hasPet)
         {
-            isFullSet = true;
+            //isFullSet = true;
+            hasFemale = hasMale = hasChild = hasPet = false;
+            Score += 200;
         }
     }
 
