@@ -34,7 +34,7 @@ public class MovementController : MonoBehaviour
                     isMoving = true;
                     directionVector2 = new Vector2(Input.GetAxis("Horizontal" + throwScript.playerNumber), Input.GetAxis("Vertical" + throwScript.playerNumber)).normalized;
                 }
-                else if (Input.GetAxis("Horizontal" + throwScript.playerNumber) != 0.0f && Input.GetAxis("Vertical" + throwScript.playerNumber) != 0.0f)
+                else if (Input.GetAxis("Horizontal" + throwScript.playerNumber) == 0.0f && Input.GetAxis("Vertical" + throwScript.playerNumber) == 0.0f)
                 {
                     isMoving = false;
                 }
