@@ -58,7 +58,7 @@ public class House : MonoBehaviour
         }
     }
 
-    public Player Owner { get; set; }
+    public ThrowScript Owner { get; set; }
 
     void UpdateStats(NPC npc)
     {
@@ -87,7 +87,7 @@ public class House : MonoBehaviour
         hasMale   = false;
         hasPet    = false;
 
-        Owner = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //Owner = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
