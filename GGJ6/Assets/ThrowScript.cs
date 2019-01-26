@@ -62,7 +62,7 @@ public class ThrowScript : MonoBehaviour
                 //Debug.Log("Player" + playerNumber+ "throws held NPC");
                 HeldGameObject.transform.position = this.gameObject.transform.position;
                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = true;
-                HeldGameObject.transform.SetParent(this.gameObject.transform.parent, true);
+                HeldGameObject.transform.SetParent(null, true);
                 HeldGameObject.SendMessage("OnThrow",movementController.directionVector2);
                 holdsSth = false;
                 HeldGameObject = null;
@@ -89,6 +89,16 @@ public class ThrowScript : MonoBehaviour
 
         _isStunned = true;
         movementController.body.velocity = (Vector2.zero);
+        if (holdsSth)
+        {
+            HeldGameObject.transform.position = this.gameObject.transform.position;
+            HeldGameObject.GetComponent<Rigidbody2D>().simulated = true;
+            HeldGameObject.transform.SetParent(null, true);
+            HeldGameObject.SendMessage("OnDrop");
+            holdsSth = false;
+
+
+        }
         yield return new WaitForSeconds(seconds);
         _isStunned = false;
     }
