@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public delegate void PlayersAndHousesSet();
+    public static event PlayersAndHousesSet OnHouseReady;
+
     public Timer timer;
     public static GameManager GM;
 
@@ -72,6 +75,7 @@ public class GameManager : MonoBehaviour
             }
             
         }
+        OnHouseReady?.Invoke();
     }
 
     void EndGame()

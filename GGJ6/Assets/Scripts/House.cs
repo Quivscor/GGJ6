@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
+
+    public delegate void ScoreChange();
+    public static event ScoreChange OnChanged;
+
     public int Score { get; set; }
 
     void UpdateScore(int amount)
     {
-        Score += amount;
+        if ((Score + amount) >= 0)
+        {
+            Score += amount;
+        }
+        else
+        {
+            Score = 0;
+        }
     }
 
-    private bool hasFemale;
-    private bool hasChild;
-    private bool hasMale;
-    private bool hasPet;
+    public bool hasFemale;
+    public bool hasChild;
+    public bool hasMale;
+    public bool hasPet;
 
     // is there a complete set of family members?
     // types: pet, female, male, child
     private bool isFullSet;
 
-    bool IsFullSet()
+    public bool IsFullSet()
     {
         return isFullSet;
     }
@@ -57,6 +68,9 @@ public class House : MonoBehaviour
     {
         UpdateHousehold(npc.Type);
         UpdateScore(npc.Score);
+
+        OnChanged?.Invoke();
+
         Debug.Log(Score);
     }
 
@@ -81,8 +95,6 @@ public class House : MonoBehaviour
         hasChild  = false;
         hasMale   = false;
         hasPet    = false;
-
-        //Owner = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
