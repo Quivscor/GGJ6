@@ -23,8 +23,8 @@ public class ThrowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DirLine.transform.localPosition = movementController.directionVector2 * 0.35f + new Vector2(0,-0.5f);
-        DirLine.transform.rotation = Quaternion.Euler(0,0,Vector2.SignedAngle(Vector2.up, movementController.directionVector2));
+        DirLine.transform.localPosition = movementController.directionVector2 * 0.35f + new Vector2(0,-0.55f);
+        DirLine.transform.rotation = Quaternion.Euler(0,0,Vector2.SignedAngle(Vector2.left, movementController.directionVector2));
 
         if (Input.GetButtonDown("Action" + playerNumber)&&!_isStunned)
         {
