@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     
-    public float throwSpeed = 200f;
+    public float throwSpeed = 400f;
     public string _type = "simple";
 
     private int _score = 50;
