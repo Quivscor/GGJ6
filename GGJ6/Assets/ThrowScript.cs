@@ -28,6 +28,7 @@ public class ThrowScript : MonoBehaviour
         {
             if (holdsSth == false)
             {
+                this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
                 Collider2D[] colliders = new Collider2D[10];
                 Collider2D myCollider = gameObject.GetComponent<Collider2D>();
                 ContactFilter2D contactFilter = new ContactFilter2D();
@@ -80,7 +81,13 @@ public class ThrowScript : MonoBehaviour
         {
             this.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        StartCoroutine(GetStunned(2.0f));
+
+        if (type == "uselessDrunk")
+        {
+            StartCoroutine(GetDrunk(5.0f));
+        }
+
+        StartCoroutine(GetStunned(0.2f));
 
 
     }
@@ -110,6 +117,14 @@ public class ThrowScript : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         _isStunned = false;
     }
+    IEnumerator GetDrunk(float seconds)
+    {
 
-    
+        movementController._invertMovement = true;
+        yield return new WaitForSeconds(seconds);
+        
+        movementController._invertMovement = false;
+    }
+
+
 }

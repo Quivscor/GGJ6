@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
 public class NPC : MonoBehaviour
 {
     
     public float throwSpeed = 400f;
     public string _type = "simple";
-
+    private Vector2 drunkDirection= Vector2.zero;
     private int _score = 50;
     public int ownerPLayer = 9999;
     public int _bouncesLeft = 3;
-
-
+    private float waveSpeed = 5.0f;
+    public float waveLength = 0.1f;
+    Vector2 perpendicularVector=Vector2.zero;
+    public float waving = 0f;
+    public bool waveLeft = true;
     public string Type
     {
         set => _type = value;
@@ -45,6 +49,32 @@ public class NPC : MonoBehaviour
         if (Type == "useless")
             Score = 0;
     }
+
+    void Update()
+    {
+        if (_isThrown && _type == "uselessDrunk")
+        {
+            if (waveLeft)
+            {
+                waving += waveSpeed * Time.deltaTime;
+                if (waving >= 1f)
+                {
+                    waveLeft = false;
+                }
+            }
+            else
+            {
+                waving -= waveSpeed * Time.deltaTime;
+                if (waving <= -1f)
+                {
+                    waveLeft = true;
+                }
+            }
+            this.gameObject.transform.position += new Vector3(perpendicularVector.x * waving * waveLength, perpendicularVector.y * waving * waveLength,0);
+            Debug.Log(new Vector3(perpendicularVector.x * waving * waveLength, perpendicularVector.y * waving * waveLength, 0));
+        }
+    }
+
     public void OnPickUp(int _newOwner)
     {
         ownerPLayer = _newOwner;
@@ -52,9 +82,14 @@ public class NPC : MonoBehaviour
     }
     public void OnThrow(Vector2 direction)
     {
+        drunkDirection = direction;
+        perpendicularVector = new Vector2(- drunkDirection.y,drunkDirection.x);
+        Debug.Log(perpendicularVector);
+
+
         _isPickedUp = false;
         _isThrown = true;
-        
+       
 
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * throwSpeed);
     }
