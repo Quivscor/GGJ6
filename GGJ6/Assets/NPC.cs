@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour
     
     public float throwSpeed = 200f;
     public string _type = "simple";
-    private int _score;
+    private int _score = 50;
     private int ownerPLayer = 9999;
 
     public string Type
@@ -39,6 +39,8 @@ public class NPC : MonoBehaviour
         {
             //Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
         }
+        if (Type == "useless")
+            Score = 0;
     }
     public void OnPickUp(int _newOwner)
     {
@@ -85,7 +87,13 @@ public class NPC : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             _isThrown = false;
             ownerPLayer = 99999;
-            Destroy(this.gameObject); 
+            Remove();
         }
+    }
+
+    public void Remove()
+    {
+        GameObject.Find("WaveManager").SendMessage("RemoveNPC", this.gameObject);
+        Destroy(this.gameObject);
     }
 }
