@@ -58,6 +58,22 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < houses.Length; i++)
         {
             houses[i].Owner = players[i];
+            switch(i)
+            {
+                case 0:
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                    break;
+                case 1:
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+                    break;
+                case 2:
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                    break;
+                case 3:
+                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
+                    break;
+            }
+            
         }
         OnHouseReady?.Invoke();
     }

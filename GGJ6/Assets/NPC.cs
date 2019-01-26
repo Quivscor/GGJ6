@@ -5,10 +5,13 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     
-    public float throwSpeed = 200f;
+    public float throwSpeed = 400f;
     public string _type = "simple";
+
     private int _score = 50;
-    private int ownerPLayer = 9999;
+    public int ownerPLayer = 9999;
+    public int _bouncesLeft = 3;
+
 
     public string Type
     {
@@ -51,6 +54,7 @@ public class NPC : MonoBehaviour
     {
         _isPickedUp = false;
         _isThrown = true;
+        
 
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * throwSpeed);
     }
@@ -60,13 +64,35 @@ public class NPC : MonoBehaviour
         _isThrown = false;
         ownerPLayer = 99999;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            
+
+            collision.gameObject.SendMessage("OnGettingHit", _type);
+            Bounce();
+        }
+        else
+        {
+            Bounce();
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             
+
             if (collision.gameObject.GetComponent<ThrowScript>().playerNumber != ownerPLayer)
             {
+                if (_type == "uselessFat" && _isThrown)
+                {
+                    Bounce();
+                    collision.gameObject.SendMessage("OnGettingHit", _type);
+                }
                 if (_isThrown)
                 {
                     collision.gameObject.SendMessage("OnGettingHit", _type);
@@ -84,16 +110,39 @@ public class NPC : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Map"))
         {
-            this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            _isThrown = false;
-            ownerPLayer = 99999;
-            Remove();
+            if (_type != "uselessFat")
+            {
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                _isThrown = false;
+                ownerPLayer = 99999;
+                Remove();
+            }
+            else
+            {
+                Bounce();
+            }
+
+
         }
     }
-
     public void Remove()
     {
         GameObject.Find("WaveManager").SendMessage("RemoveNPC", this.gameObject);
         Destroy(this.gameObject);
+    }
+
+    public void Bounce()
+    {
+
+        if (_bouncesLeft > 0)
+        {
+            this.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+            ownerPLayer = 99999;
+            _bouncesLeft--;
+        }
+        else
+        {
+            Remove();
+        }
     }
 }
