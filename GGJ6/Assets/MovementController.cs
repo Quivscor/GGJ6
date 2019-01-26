@@ -16,7 +16,7 @@ public class MovementController : MonoBehaviour
     {
         throwScript = GetComponent<ThrowScript>();
         body = GetComponent<Rigidbody2D>();
-        Debug.Log("Horizontal" + throwScript.playerNumber);
+        //Debug.Log("Horizontal" + throwScript.playerNumber);
     }
 
     // Update is called once per frame
