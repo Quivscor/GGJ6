@@ -6,9 +6,9 @@ public class NPC : MonoBehaviour
 {
     
     public float throwSpeed = 200f;
-    private string _type ="simple";
+    public string _type = "simple";
     private int _score;
-    private int ownerPLayer=9999;
+    private int ownerPLayer = 9999;
 
     public string Type
     {

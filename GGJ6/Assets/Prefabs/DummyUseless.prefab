@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeed: 0
-  type: useless
-  score: 0
+  _type: useless
+  _isPickedUp: 0
+  _isThrown: 0

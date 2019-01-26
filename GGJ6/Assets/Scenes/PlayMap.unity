@@ -412,8 +412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47ee45306f60ae419a1e965c5a441c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerList: []
-  uselessCount: 0
+  spawnerList:
+  - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  uselessCount: 3
 --- !u!1 &569002631
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,8 +510,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47ee45306f60ae419a1e965c5a441c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerList: []
-  uselessCount: 0
+  spawnerList:
+  - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  uselessCount: 3
 --- !u!1 &576587237
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +551,7 @@ MonoBehaviour:
   - {fileID: 569002634}
   - {fileID: 1587297241}
   activeNPCs: []
-  respawnCooldown: 10
+  respawnCooldown: 2
 --- !u!4 &576587239
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,8 +1283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47ee45306f60ae419a1e965c5a441c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerList: []
-  uselessCount: 0
+  spawnerList:
+  - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  uselessCount: 3
 --- !u!1 &1931072005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,8 +1381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47ee45306f60ae419a1e965c5a441c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerList: []
-  uselessCount: 0
+  spawnerList:
+  - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  uselessCount: 3
 --- !u!1001 &2138295509
 PrefabInstance:
   m_ObjectHideFlags: 0
