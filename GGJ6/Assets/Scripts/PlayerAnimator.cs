@@ -29,6 +29,8 @@ public class PlayerAnimator : MonoBehaviour
             direction = 3;
 
         //Debug.Log("Direction = " + direction);
+        animator.SetInteger("direction", direction);
+        animator.SetBool("isMoving", true);
 
         if (throwing.holdsSth)
         {
