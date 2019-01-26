@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ThrowScript : MonoBehaviour
 {
+    public GameObject DirLine = null;
     public bool holdsSth = false;
     public GameObject HeldGameObject= null;
     public int playerNumber = 0;
@@ -17,13 +18,14 @@ public class ThrowScript : MonoBehaviour
     {
         movementController = GetComponent<MovementController>();
         Debug.Log("Action" + playerNumber);
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        DirLine.transform.localPosition = movementController.directionVector2 * 0.35f + new Vector2(0,-0.5f);
+        DirLine.transform.rotation = Quaternion.Euler(0,0,Vector2.SignedAngle(Vector2.up, movementController.directionVector2));
+
         if (Input.GetButtonDown("Action" + playerNumber)&&!_isStunned)
         {
             if (holdsSth == false)
@@ -84,9 +86,11 @@ public class ThrowScript : MonoBehaviour
         if (type == "uselessDrunk")
         {
             StartCoroutine(GetDrunk(5.0f));
+            StartCoroutine(GetStunned(0.2f));
+            return;
         }
+        StartCoroutine(GetStunned(2f));
 
-        StartCoroutine(GetStunned(0.2f));
 
 
     }
