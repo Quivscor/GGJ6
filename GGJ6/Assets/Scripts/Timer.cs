@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    float timeInSeconds = 0;
+    float timeInSeconds = -3;
     public string time = "00:00";
 
     public bool stopTime = false;
@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour
             timeInSeconds += Time.deltaTime;
             int minutes = (int)timeInSeconds / 60;
             string fillerZero = ((int)timeInSeconds % 60) > 9 ? "" : "0";
-            time = minutes.ToString() + ":" + fillerZero + ((int)timeInSeconds % 60).ToString();
+            time = minutes.ToString() + ":" + fillerZero + ((int)Mathf.Abs(timeInSeconds) % 60).ToString();
             //Debug.Log(time);
         }
     }

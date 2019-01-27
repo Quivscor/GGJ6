@@ -241,6 +241,10 @@ MonoBehaviour:
   timer: {fileID: 0}
   endCondition: 0:10
   victoryText: {fileID: 0}
+  houses:
+  - {fileID: 1744774478}
+  players:
+  - {fileID: 1097844642}
 --- !u!4 &224054964
 Transform:
   m_ObjectHideFlags: 0
@@ -448,6 +452,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 00:00
   stopTime: 0
+--- !u!114 &1097844642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8083190876493635494, guid: b84c2b468f52d2c4ba7e56954cd860bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1390734731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a91d2a0b7d1914fafe4ee1b5b9d2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1215965110
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fc68cc0bf4485429ef5d7fe63b8563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasFemale: 0
+  hasChild: 0
+  hasMale: 0
+  hasPet: 0
 --- !u!4 &1744774479
 Transform:
   m_ObjectHideFlags: 0

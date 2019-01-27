@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class GameManager : MonoBehaviour
     public Timer timer;
     public static GameManager GM;
 
+    public float preGameTime;
+    bool lockCountdown = false;
+
     public string endCondition;
 
     public Text victoryText;
 
-    House[] houses = new House[4];
+    public List<House> houses;
+    public List<ThrowScript> players;
 
     private void Awake()
     {
@@ -23,22 +28,27 @@ public class GameManager : MonoBehaviour
             GM = this;
         else if (GM != this)
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         timer = GetComponent<Timer>();
-        houses = GameObject.FindObjectsOfType<House>();
         if(houses == null)
         {
-            Debug.Log("No houses on map!");
+            Debug.Log("No houses added!");
+        }
+        if(players == null)
+        {
+            Debug.Log("No players added");
         }
         victoryText = GameObject.Find("VictoryText").GetComponent<Text>();
         if(victoryText == null)
         {
             Debug.Log("No VictoryText on map!");
+        }
+        if(endCondition == "")
+        {
+            Debug.Log("There is no end condition");
         }
 
         InitGame();
@@ -46,34 +56,66 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(preGameTime > 2)
+        {
+            victoryText.text = "3!";
+        }
+        if(preGameTime < 2 && preGameTime > 1)
+        {
+            victoryText.text = "2!";
+        }
+        if (preGameTime < 1 && preGameTime > 0)
+        {
+            victoryText.text = "1!";
+        }
+        if (preGameTime < 0)
+        {
+            victoryText.text = "Go!";
+            foreach(ThrowScript player in players)
+            {
+                player._isStunned = false;
+            }
+        }
+        if(preGameTime < -1)
+        {
+            victoryText.text = "";
+            lockCountdown = true;
+        }
+
         if (endCondition == timer.time)
         {
             EndGame();
         }
+
+        if(!lockCountdown)
+            preGameTime -= Time.deltaTime;
     }
 
     void InitGame()
     {
-        ThrowScript[] players = GameObject.FindObjectsOfType<ThrowScript>();
-        for(int i = 0; i < houses.Length; i++)
-        {
-            houses[i].Owner = players[i];
+        int i = 0;
+        foreach(House house in houses)
+        { 
             switch(i)
             {
                 case 0:
                     players[i].GetComponentInChildren<SpriteRenderer>().color = Color.red;
+                    players[i]._isStunned = true;
                     break;
                 case 1:
                     players[i].GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+                    players[i]._isStunned = true;
                     break;
                 case 2:
                     players[i].GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                    players[i]._isStunned = true;
                     break;
                 case 3:
                     players[i].GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
+                    players[i]._isStunned = true;
                     break;
             }
-            
+            i++;
         }
         OnHouseReady?.Invoke();
     }
@@ -92,5 +134,13 @@ public class GameManager : MonoBehaviour
         }
         victoryText.text = "Player " + bestScoreHouseId + " won!\nScore: " + bestScore;
         victoryText.enabled = true;
+
+        StartCoroutine(FinishGame());
+    }
+
+    IEnumerator FinishGame()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(0);
     }
 }
