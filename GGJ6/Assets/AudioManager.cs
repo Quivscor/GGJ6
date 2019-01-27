@@ -26,10 +26,15 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play(string name)
+    private void Start()
+    {
+        Play("Werq", 0.6f);
+    }
+
+    public void Play(string name, float volume = 1f)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.audio.PlayOneShot(s.clip);
+        gameObject.GetComponent<AudioSource>().PlayOneShot(s.clip, volume);
     }
 }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    
+    AudioManager audioManager;
     public delegate void ScoreChange();
     public static event ScoreChange OnChanged;
 
@@ -15,6 +15,8 @@ public class House : MonoBehaviour
         if ((Score + amount) >= 0)
         {
             Score += amount;
+            if(amount > 0)
+                audioManager.Play("Points");
         }
         else
         {
@@ -61,6 +63,7 @@ public class House : MonoBehaviour
             //isFullSet = true;
             hasFemale = hasMale = hasChild = hasPet = false;
             Score += 200;
+            audioManager.Play("Cheer" + Random.Range(1, 2).ToString());
         }
     }
 
@@ -90,7 +93,7 @@ public class House : MonoBehaviour
     void Start()
     {
         Score = 0;
-
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         isFullSet = false;
 
         hasFemale = false;

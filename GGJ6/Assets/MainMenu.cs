@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject panel;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -13,6 +16,11 @@ public class MainMenu : MonoBehaviour
     public void EndGame()
     {
         Application.Quit();
+    }
+
+    public void ToggleAuthors()
+    {
+        panel.active = !panel.active;
     }
 
     public void Update()

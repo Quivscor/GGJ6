@@ -183,6 +183,7 @@ public class NPC : MonoBehaviour
     }
     public void Remove()
     {
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Hit");
         GameObject.Find("WaveManager").SendMessage("RemoveNPC", this.gameObject);
         Destroy(this.gameObject);
     }
