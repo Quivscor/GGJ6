@@ -36,6 +36,18 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         gameObject.GetComponent<AudioSource>().PlayOneShot(s.clip, volume);
     }
+
+    public void PlayWithStop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.audio.Play();
+    }
+
+    public void StopMusic(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.audio.Stop();
+    }
 }
 
 [System.Serializable]
