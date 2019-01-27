@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         if (spawnSmoke != null)
             spawnSmoke.Play();
         GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Spawn");
-        return Instantiate(spawnerList[index], new Vector3(this.transform.position.x + Random.Range(-1.0f,1.0f),
+        return Instantiate(spawnerList[index], new Vector3(this.transform.position.x + Random.Range(-.5f,.5f),
             this.transform.position.y + Random.Range(-2.0f,2.0f),this.transform.position.z), Quaternion.identity);
     }
 }
