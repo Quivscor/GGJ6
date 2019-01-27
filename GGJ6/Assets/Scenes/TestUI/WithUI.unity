@@ -209,11 +209,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 68613081}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &68613081
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -297,7 +298,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5058,182 +5059,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 533219523}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &434794888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 434794890}
-  - component: {fileID: 434794889}
-  - component: {fileID: 434794891}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &434794889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434794888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e7dea9b92762624bb008fff15a1a0de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Cheer1
-    clip: {fileID: 8300000, guid: bdb13fb342050c248b92f7bd318067ff, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Cheer2
-    clip: {fileID: 8300000, guid: ac9e4691169e12045b08357513baf079, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Hit
-    clip: {fileID: 8300000, guid: b1afd6c1a491ad34ea6582e4a9cae215, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Points
-    clip: {fileID: 8300000, guid: b12dd8466864cde49b1e3d4d35ed0b43, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Spawn
-    clip: {fileID: 8300000, guid: 227ccd10edf9f5b45b3a64a1ae380ef9, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Stun
-    clip: {fileID: 8300000, guid: 48d53c4afd97ae44fadd6ccddcb5892c, type: 3}
-    volume: 0
-    pitch: 0
-    audio: {fileID: 0}
-  - name: Werq
-    clip: {fileID: 8300000, guid: f646b12c3d01f6045abe9f4e72703838, type: 3}
-    volume: 0.6
-    pitch: 0
-    audio: {fileID: 0}
---- !u!4 &434794890
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434794888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 131.61395, y: 54.956078, z: -11.875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &434794891
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434794888}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &469909714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,6 +5528,7 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
@@ -5791,7 +5617,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -10702,11 +10528,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 1034990396}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &1034990396
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10790,7 +10617,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -16764,11 +16591,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 1887571721}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &1887571721
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -16852,7 +16680,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
