@@ -134,7 +134,7 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
+           
 
             if (collision.gameObject.GetComponent<ThrowScript>().playerNumber != ownerPLayer)
             {
@@ -153,9 +153,15 @@ public class NPC : MonoBehaviour
                     ownerPLayer = collision.GetComponent<ThrowScript>().playerNumber;
                     //Debug.Log("NPC can be picked up by " + ownerPLayer.ToString());
                 }
+                if ((Type == "male" || Type == "female" || Type == "child" || Type == "pet") && _isThrown)
+                {
+                    Remove();
+                }
             }
+
             
-           
+
+
 
         }
         if(collision.gameObject.CompareTag("Map"))

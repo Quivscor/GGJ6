@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         {
             victoryText.text = "1!";
         }
-        if (preGameTime < 0)
+        if (preGameTime < 0 && !lockCountdown)
         {
             victoryText.text = "Go!";
             foreach(GameObject player in players)
