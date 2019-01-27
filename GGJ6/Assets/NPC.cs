@@ -90,7 +90,22 @@ public class NPC : MonoBehaviour
         {
             animator.SendMessage("PickedUp");
         }
-        
+        AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        switch (_type)
+        {
+            case "male":
+                audioManager.Play("Man");
+                break;
+            case "female":
+                audioManager.Play("Woman");
+                break;
+            case "child":
+                audioManager.Play("Baby");
+                break;
+            case "pet":
+                audioManager.Play("Dog");
+                break;
+        }
     }
     public void OnThrow(Vector2 direction)
     {
