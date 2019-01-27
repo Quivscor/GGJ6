@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour
         {
             //Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
         }
-        if (Type == "useless")
+        if (Type == "useless"||Type=="uselessFat"||Type=="uselessDrunk")
             Score = 0;
     }
 

@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 1149853420}
     - target: {fileID: 7926654433480867367, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -388,11 +393,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.2532246
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 1149853420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1 &413338745 stripped
@@ -631,6 +631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrusWallSide (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9220017901948460331, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -690,6 +695,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 17.580242
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635376404216059410, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda08da8c0544904a99b091897872cc9, type: 3}
@@ -870,8 +880,8 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
+  - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
   spawnSmoke: {fileID: 0}
 --- !u!114 &729184533 stripped
@@ -910,6 +920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 413338745}
     - target: {fileID: 7926654433480867367, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1041,11 +1056,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.5271206
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 413338745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1 &1034990392
@@ -1163,6 +1173,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961560828843623, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961560828843623, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961560093897793, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471961560093897793, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8471961560379224344, guid: e2c7b259a2ecfd34a8138b5db4720a74,
         type: 3}
@@ -2394,16 +2439,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0.853625
       objectReference: {fileID: 0}
-    - target: {fileID: 8471961560093897793, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471961560093897793, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8471961560397264323, guid: e2c7b259a2ecfd34a8138b5db4720a74,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2429,16 +2464,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 8471961560828843623, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471961560828843623, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8471961561183782319, guid: e2c7b259a2ecfd34a8138b5db4720a74,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -2453,21 +2478,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471961561457367325, guid: e2c7b259a2ecfd34a8138b5db4720a74,
-        type: 3}
-      propertyPath: m_FontData.m_MinSize
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8471961560937924628, guid: e2c7b259a2ecfd34a8138b5db4720a74,
         type: 3}
@@ -2634,6 +2644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrusWallSide (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9220017901948460331, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2694,6 +2709,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 17.580242
       objectReference: {fileID: 0}
+    - target: {fileID: 7635376404216059410, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda08da8c0544904a99b091897872cc9, type: 3}
 --- !u!1001 &1293957193
@@ -2708,6 +2728,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 470373342}
     - target: {fileID: 7926654433480867367, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2849,11 +2874,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.350039
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 470373342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1001 &1296138004
@@ -2868,6 +2888,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 2071580286}
     - target: {fileID: 7926654433480867367, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3009,11 +3034,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.3042254
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 2071580286}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!114 &1507654263 stripped
@@ -3076,6 +3096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrusWallSide (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9220017901948460331, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
+      objectReference: {fileID: 0}
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3135,6 +3160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 9.56904
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635376404216059410, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cda08da8c0544904a99b091897872cc9, type: 3}
@@ -3763,6 +3793,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrusWallSide
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220017901948460331, guid: cda08da8c0544904a99b091897872cc9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Map
       objectReference: {fileID: 0}
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
