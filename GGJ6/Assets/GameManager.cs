@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
             {
                 bestScore = house.Score;
                 bestScoreHouseId = house.Owner.GetComponent<ThrowScript>().playerNumber;
+                victoryText.color = house.GetComponent<SpriteRenderer>().color;
             }
         }
         victoryText.text = "Player " + bestScoreHouseId + " won!\nScore: " + bestScore;
