@@ -29,14 +29,19 @@ public class PlayerHud : MonoBehaviour
             hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p1");
     }
 
-    void ReserHudData()
+    void ResetHudData()
     {
         hasChild.sprite = Resources.Load<Sprite>("FamilyIcons/d2");
         hasMale.sprite = Resources.Load<Sprite>("FamilyIcons/t2");
         hasFemale.sprite = Resources.Load<Sprite>("FamilyIcons/m2");
         hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p2");
-
-
+    }
+    void SetHudData()
+    {
+        hasChild.sprite = Resources.Load<Sprite>("FamilyIcons/d1");
+        hasMale.sprite = Resources.Load<Sprite>("FamilyIcons/t1");
+        hasFemale.sprite = Resources.Load<Sprite>("FamilyIcons/m1");
+        hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p1");
     }
 
     // Start is called before the first frame update
@@ -131,7 +136,26 @@ public class PlayerHud : MonoBehaviour
         if (House.isFullSet)
         {
             House.isFullSet = false;
-            ReserHudData();
+            StartCoroutine(FullSetReset());
         }
+    }
+
+    IEnumerator FullSetReset()
+    {
+
+        for (int i = 0; i < 3; i++)
+        {
+            ResetHudData();
+            yield return new WaitForSeconds(0.2f);
+            SetHudData();
+            yield return new WaitForSeconds(0.2f);
+            ResetHudData();
+            yield return new WaitForSeconds(0.2f);
+            SetHudData();
+            yield return new WaitForSeconds(0.2f);
+        }
+        
+        ResetHudData();
+
     }
 }
