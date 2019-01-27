@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ThrowScript : MonoBehaviour
 {
+    public string test = "sdgsdfgsdfg";
     public GameObject DirLine = null;
     public bool holdsSth = false;
     public GameObject HeldGameObject= null;
