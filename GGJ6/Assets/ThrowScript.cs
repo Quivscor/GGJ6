@@ -66,11 +66,11 @@ public class ThrowScript : MonoBehaviour
                             {
                                 this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
                                 HeldGameObject = colliders[i].gameObject;
-                                HeldGameObject.SendMessage("OnPickUp",playerNumber);
                                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = false;
                                 HeldGameObject.transform.position = this.gameObject.transform.position;
                                 HeldGameObject.transform.SetParent(this.gameObject.transform, true);
                                 HeldGameObject.transform.Translate(new Vector3(0.0f, 0.05f, 0.0f));
+                                HeldGameObject.SendMessage("OnPickUp", playerNumber);
                                 holdsSth = true;
                                 break;
                             }

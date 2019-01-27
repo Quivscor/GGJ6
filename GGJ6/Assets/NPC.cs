@@ -17,6 +17,7 @@ public class NPC : MonoBehaviour
     Vector2 perpendicularVector=Vector2.zero;
     public float waving = 0f;
     public bool waveLeft = true;
+    DadAnimator animator;
     public string Type
     {
         set => _type = value;
@@ -41,6 +42,7 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponentInChildren<DadAnimator>();
         _sprite = this.gameObject.transform.Find("Sprite").gameObject;
         if(_sprite == null)
         {
@@ -84,6 +86,7 @@ public class NPC : MonoBehaviour
     {
         ownerPLayer = _newOwner;
         _isPickedUp = true;
+        animator.SendMessage("PickedUp");
     }
     public void OnThrow(Vector2 direction)
     {
@@ -94,8 +97,8 @@ public class NPC : MonoBehaviour
 
         _isPickedUp = false;
         _isThrown = true;
-       
 
+        animator.SendMessage("Thrown", direction);
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * throwSpeed);
     }
     public void OnDrop()
