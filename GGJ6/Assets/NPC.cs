@@ -48,7 +48,7 @@ public class NPC : MonoBehaviour
         {
             //Debug.Log("There is no sprite child for this NPC or it's not named Sprite!");
         }
-        if (Type == "useless")
+        if (Type == "useless"|| Type=="uselessFat" || Type == "uselessDrunk")
             Score = 0;
     }
 
@@ -86,7 +86,11 @@ public class NPC : MonoBehaviour
     {
         ownerPLayer = _newOwner;
         _isPickedUp = true;
-        animator.SendMessage("PickedUp");
+        if (animator != null)
+        {
+            animator.SendMessage("PickedUp");
+        }
+        
     }
     public void OnThrow(Vector2 direction)
     {
@@ -97,8 +101,11 @@ public class NPC : MonoBehaviour
 
         _isPickedUp = false;
         _isThrown = true;
-
-        animator.SendMessage("Thrown", direction);
+        if (animator != null)
+        {
+            animator.SendMessage("Thrown", direction);
+        }
+ 
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * throwSpeed);
     }
     public void OnDrop()
