@@ -215,7 +215,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 683896980}
+  spawnSmoke: {fileID: 68613081}
 --- !u!198 &68613081
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10536,7 +10536,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 683896980}
+  spawnSmoke: {fileID: 1034990396}
 --- !u!198 &1034990396
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -15325,6 +15325,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 682849556}
+    - target: {fileID: 8471961560801756395, guid: e2c7b259a2ecfd34a8138b5db4720a74,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00079345703
+      objectReference: {fileID: 0}
     - target: {fileID: 8471961560937924628, guid: e2c7b259a2ecfd34a8138b5db4720a74,
         type: 3}
       propertyPath: House
@@ -16669,7 +16674,7 @@ MonoBehaviour:
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 683896980}
+  spawnSmoke: {fileID: 1887571721}
 --- !u!198 &1887571721
 ParticleSystem:
   m_ObjectHideFlags: 0
