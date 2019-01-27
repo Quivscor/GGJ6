@@ -39,7 +39,7 @@ public class PlayerHud : MonoBehaviour
     {
         Component[] texts;
 
-        texts = GetComponentsInChildren(typeof(Text));
+        texts = gameObject.GetComponentsInChildren(typeof(Text));
 
         if (texts != null)
         {
@@ -52,7 +52,7 @@ public class PlayerHud : MonoBehaviour
         else
         {
             // Try again, looking for inactive GameObjects
-            Component[] textsInactive = GetComponentsInChildren(typeof(Text), true);
+            Component[] textsInactive = gameObject.GetComponentsInChildren(typeof(Text), true);
 
             foreach (Text text in textsInactive)
             {
@@ -67,7 +67,7 @@ public class PlayerHud : MonoBehaviour
 
         Component[] familyIcons;
 
-        familyIcons = GetComponentsInChildren(typeof(Image));
+        familyIcons = gameObject.GetComponentsInChildren(typeof(Image));
 
         if (familyIcons != null)
         {
@@ -82,7 +82,7 @@ public class PlayerHud : MonoBehaviour
         else
         {
             // Try again, looking for inactive GameObjects
-            Component[] familyIconsInactive = GetComponentsInChildren(typeof(Image), true);
+            Component[] familyIconsInactive = gameObject.GetComponentsInChildren(typeof(Image), true);
 
             foreach (Image familyIcon in familyIconsInactive)
             {

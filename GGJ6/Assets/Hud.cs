@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hud : MonoBehaviour
 {
     House[] houses = new House[4];
+    ThrowScript[] players = new ThrowScript[4];
 
     public GameObject hud1;
     public GameObject hud2;
@@ -25,12 +26,18 @@ public class Hud : MonoBehaviour
     void InitHuds()
     {
         houses = GameObject.FindObjectsOfType<House>();
+        players = GameObject.FindObjectsOfType<ThrowScript>();
+
+        for(int i = 0; i < houses.Length;  i++)
+        {
+            houses[i].Owner = players[i];
+        }
 
         if (hud1 != null && houses.Length >= 1)
         {
             foreach(House h in houses)
             {
-                if(h.Owner.playerNumber == 4)
+                if(h.Owner.playerNumber == 1)
                 {
                     hud1.GetComponent<PlayerHud>().House = h;
                     hud1.GetComponent<PlayerHud>().InitDisplayData();
@@ -42,7 +49,7 @@ public class Hud : MonoBehaviour
         {
             foreach (House h in houses)
             {
-                if (h.Owner.playerNumber == 1)
+                if (h.Owner.playerNumber == 2)
                 {
                     hud2.GetComponent<PlayerHud>().House = h;
                     hud2.GetComponent<PlayerHud>().InitDisplayData();
@@ -66,7 +73,7 @@ public class Hud : MonoBehaviour
         {
             foreach (House h in houses)
             {
-                if (h.Owner.playerNumber == 2)
+                if (h.Owner.playerNumber == 4)
                 {
                     hud4.GetComponent<PlayerHud>().House = h;
                     hud4.GetComponent<PlayerHud>().InitDisplayData();
