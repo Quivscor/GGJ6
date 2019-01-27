@@ -80,6 +80,31 @@ MonoBehaviour:
     volume: 0.6
     pitch: 0
     audio: {fileID: 0}
+  - name: Baby
+    clip: {fileID: 8300000, guid: 45d8407ea4b8fab49a055ccf8b39c9ea, type: 3}
+    volume: 0.6
+    pitch: 0
+    audio: {fileID: 0}
+  - name: Dog
+    clip: {fileID: 8300000, guid: 5696f97f9a520b24abf92794a042ac93, type: 3}
+    volume: 0.6
+    pitch: 0
+    audio: {fileID: 0}
+  - name: Man
+    clip: {fileID: 8300000, guid: ef6e91d006635624ebaba518db82259d, type: 3}
+    volume: 0.6
+    pitch: 0
+    audio: {fileID: 0}
+  - name: Throw
+    clip: {fileID: 8300000, guid: 990bf3e2c7245744bacc4a8ade4cc0ff, type: 3}
+    volume: 0.6
+    pitch: 0
+    audio: {fileID: 0}
+  - name: Woman
+    clip: {fileID: 8300000, guid: d5fb9c214520cb749abeaba8465be9f9, type: 3}
+    volume: 0.6
+    pitch: 0
+    audio: {fileID: 0}
 --- !u!82 &8523210157417924074
 AudioSource:
   m_ObjectHideFlags: 0

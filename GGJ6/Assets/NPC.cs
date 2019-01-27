@@ -18,6 +18,8 @@ public class NPC : MonoBehaviour
     public float waving = 0f;
     public bool waveLeft = true;
     DadAnimator animator;
+    AudioSource source;
+    public AudioClip pickClip;
     public string Type
     {
         set => _type = value;
@@ -42,6 +44,7 @@ public class NPC : MonoBehaviour
 
     private void Start()
     {
+        source = gameObject.AddComponent<AudioSource>();
         animator = GetComponentInChildren<DadAnimator>();
         _sprite = this.gameObject.transform.Find("Sprite").gameObject;
         if(_sprite == null)
@@ -90,7 +93,24 @@ public class NPC : MonoBehaviour
         {
             animator.SendMessage("PickedUp");
         }
-        
+        AudioManager audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        if(pickClip != null)
+            source.PlayOneShot(pickClip);
+        //switch (_type)
+        //{
+        //    case "male":
+        //        audioManager.Play("Man");
+        //        break;
+        //    case "female":
+        //        audioManager.Play("Woman");
+        //        break;
+        //    case "child":
+        //        audioManager.Play("Baby");
+        //        break;
+        //    case "pet":
+        //        audioManager.Play("Dog");
+        //        break;
+        //}   
     }
     public void OnThrow(Vector2 direction)
     {

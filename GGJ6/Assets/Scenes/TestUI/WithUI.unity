@@ -210,6 +210,7 @@ MonoBehaviour:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
   - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
+  - {fileID: 5113901532282581707, guid: 6bc74147bd3e5014782cb7106cadaa0f, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
@@ -4905,11 +4906,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 1149853420}
     - target: {fileID: 7926654433480867364, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_Offset.y
@@ -5051,6 +5047,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10863496
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 1149853420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1 &413338745 stripped
@@ -5529,6 +5530,7 @@ MonoBehaviour:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
   - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
+  - {fileID: 5113901532282581707, guid: 6bc74147bd3e5014782cb7106cadaa0f, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
@@ -10293,11 +10295,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 413338745}
     - target: {fileID: 7926654433480867364, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_Offset.x
@@ -10429,6 +10426,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10560836
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 413338745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1 &1034990392
@@ -10529,6 +10531,7 @@ MonoBehaviour:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
   - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
+  - {fileID: 5113901532282581707, guid: 6bc74147bd3e5014782cb7106cadaa0f, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
@@ -15518,11 +15521,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 470373342}
     - target: {fileID: 7926654433480867364, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_Offset.y
@@ -15664,6 +15662,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.110700004
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 470373342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1001 &1296138004
@@ -15678,11 +15681,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyHouse (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
-        type: 3}
-      propertyPath: Owner
-      value: 
-      objectReference: {fileID: 2071580286}
     - target: {fileID: 7926654433480867364, guid: 2df79554301b7234ca33c292490634c2,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -15824,6 +15822,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.10258248
       objectReference: {fileID: 0}
+    - target: {fileID: 7926654433480867384, guid: 2df79554301b7234ca33c292490634c2,
+        type: 3}
+      propertyPath: Owner
+      value: 
+      objectReference: {fileID: 2071580286}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df79554301b7234ca33c292490634c2, type: 3}
 --- !u!1001 &1350624527
@@ -16661,6 +16664,7 @@ MonoBehaviour:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
   - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
+  - {fileID: 5113901532282581707, guid: 6bc74147bd3e5014782cb7106cadaa0f, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
