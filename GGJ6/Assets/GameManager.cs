@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     public Text victoryText;
 
     public List<House> houses;
-    public List<ThrowScript> players;
-
+    //public List<ThrowScript> players;
+    public List<GameObject> players;
     private void Awake()
     {
         if (GM == null)
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("No players added");
         }
-        victoryText = GameObject.Find("VictoryText").GetComponent<Text>();
+        //victoryText = GameObject.Find("VictoryText").GetComponent<Text>();
         if(victoryText == null)
         {
             Debug.Log("No VictoryText on map!");
@@ -71,9 +71,9 @@ public class GameManager : MonoBehaviour
         if (preGameTime < 0)
         {
             victoryText.text = "Go!";
-            foreach(ThrowScript player in players)
+            foreach(GameObject player in players)
             {
-                player._isStunned = false;
+                player.GetComponent<ThrowScript>()._isStunned = false;
             }
         }
         if(preGameTime < -1)
@@ -93,31 +93,20 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-        int i = 0;
-        foreach(House house in houses)
-        { 
-            switch(i)
-            {
-                case 0:
-                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.red;
-                    players[i]._isStunned = true;
-                    break;
-                case 1:
-                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.blue;
-                    players[i]._isStunned = true;
-                    break;
-                case 2:
-                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.green;
-                    players[i]._isStunned = true;
-                    break;
-                case 3:
-                    players[i].GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
-                    players[i]._isStunned = true;
-                    break;
-            }
-            i++;
-        }
-        OnHouseReady?.Invoke();
+
+        players[0].GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        players[0].GetComponent<ThrowScript>()._isStunned = true;
+        //houses[0].Owner = players[0];
+        players[1].GetComponentInChildren<SpriteRenderer>().color = Color.green;
+        players[1].GetComponent<ThrowScript>()._isStunned = true;
+       // houses[1].Owner = players[1];
+        players[2].GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
+        players[2].GetComponent<ThrowScript>()._isStunned = true;
+        //houses[2].Owner = players[2];
+        players[3].GetComponentInChildren<SpriteRenderer>().color = Color.blue;
+        players[3].GetComponent<ThrowScript>()._isStunned = true;
+       // houses[3].Owner = players[3];
+        //OnHouseReady?.Invoke();
     }
 
     void EndGame()

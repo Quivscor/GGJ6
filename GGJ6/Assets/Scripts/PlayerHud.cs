@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHud : MonoBehaviour
 {
-    public House House { get; set; }
+    public House House;
 
     public Text playerName;
     public Text playerScore;
@@ -32,36 +32,38 @@ public class PlayerHud : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InitDisplayData();
     }
 
     public void InitDisplayData()
     {
         Component[] texts;
 
-        texts = gameObject.GetComponentsInChildren(typeof(Text));
 
-        if (texts != null)
-        {
-            foreach (Text text in texts)
-            {
-                if (text.name == "PlayerName") playerName = text;
-                if (text.name == "Score") playerScore = text;
-            }
-        }
-        else
-        {
-            // Try again, looking for inactive GameObjects
-            Component[] textsInactive = gameObject.GetComponentsInChildren(typeof(Text), true);
+        //texts = GetComponentsInChildren(typeof(Text));
 
-            foreach (Text text in textsInactive)
-            {
-                if (text.name == "PlayerName") playerName = text;
-                if (text.name == "Score") playerScore = text;
-            }
-        }
+        //if (texts != null)
+        //{
+        //    foreach (Text text in texts)
+        //    {
+        //        if (text.name == "PlayerName") playerName = text;
+        //        if (text.name == "Score") playerScore = text;
+        //    }
+        //}
+        //else
+        //{
+        //    // Try again, looking for inactive GameObjects
+        //    Component[] textsInactive = GetComponentsInChildren(typeof(Text), true);
 
-        playerName.text = "Player " + House.Owner.playerNumber;
+        //    foreach (Text text in textsInactive)
+        //    {
+        //        if (text.name == "PlayerName") playerName = text;
+        //        if (text.name == "Score") playerScore = text;
+        //    }
+        //}
+
+        playerName.text = "Player " + House.Owner.GetComponent<ThrowScript>().playerNumber;
+
         playerName.color = House.GetComponent<SpriteRenderer>().color;
         playerScore.text = 0.ToString();
 

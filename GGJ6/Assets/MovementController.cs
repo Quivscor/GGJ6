@@ -32,7 +32,7 @@ public class MovementController : MonoBehaviour
                 if (temVel == Vector2.zero)
                 {
                     temVel = new Vector2(Mathf.Lerp(0, Input.GetAxisRaw("Horizontal" + throwScript.playerNumber + "Key") * speed, 1f), Mathf.Lerp(0, Input.GetAxisRaw("Vertical" + throwScript.playerNumber + "Key") * speed, 1f));
-                    Debug.Log("wololo" + throwScript.playerNumber);
+                    //Debug.Log("wololo" + throwScript.playerNumber);
                 }
             }
             if (!_invertMovement)

@@ -52,6 +52,11 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
+        //zDebug.Log(Mathf.Sqrt(this.gameObject.transform.position.x* this.gameObject.transform.position.x + this.gameObject.transform.position.y* this.gameObject.transform.position.y));
+        if (Mathf.Abs(this.gameObject.transform.position.x) > 10.0f|| Mathf.Abs(this.gameObject.transform.position.y) > 10.0f)
+        {
+            Remove();
+        }
         if (_isThrown && _type == "uselessDrunk")
         {
             if (waveLeft)

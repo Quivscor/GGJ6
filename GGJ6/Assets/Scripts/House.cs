@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-
+    
     public delegate void ScoreChange();
     public static event ScoreChange OnChanged;
 
@@ -64,7 +64,7 @@ public class House : MonoBehaviour
         }
     }
 
-    public ThrowScript Owner { get; set; }
+    public GameObject Owner;
 
     void UpdateStats(NPC npc)
     {
