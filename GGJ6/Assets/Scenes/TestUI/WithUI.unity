@@ -221,11 +221,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 68613081}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &68613081
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -309,7 +310,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5727,6 +5728,7 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
@@ -5815,7 +5817,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -10738,11 +10740,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 1034990396}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &1034990396
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -10826,7 +10829,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -18089,11 +18092,12 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 5113901532282581707, guid: c487e2c42eb8d3341b61bf68e403ec9e, type: 3}
+  - {fileID: 5113901532282581707, guid: bdb24b1a9a4cc7a4ca31191f8334b2bf, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
   - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
   - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
-  spawnSmoke: {fileID: 1887571721}
+  spawnSmoke: {fileID: 683896980}
 --- !u!198 &1887571721
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -18177,7 +18181,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
