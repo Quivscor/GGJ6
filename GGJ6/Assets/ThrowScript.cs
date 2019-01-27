@@ -125,6 +125,8 @@ public class ThrowScript : MonoBehaviour
         Debug.Log("Stunned for" +seconds);
 
         _isStunned = true;
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Hit");
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Stun");
         movementController.body.velocity = (Vector2.zero);
         if (holdsSth)
         {
