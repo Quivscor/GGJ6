@@ -61,4 +61,23 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("pickup", true);
         animator.Play("PickUp");
     }
+
+    public void Throw()
+    {
+        switch(direction)
+        {
+            case 0:
+                animator.Play("BackThrow");
+                break;
+            case 1:
+                animator.Play("LeftThrow");
+                break;
+            case 2:
+                animator.Play("RightThrow");
+                break;
+            case 3:
+                animator.Play("FrontThrow");
+                break;
+        }
+    }
 }
