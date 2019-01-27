@@ -219,8 +219,8 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
+  - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
   spawnSmoke: {fileID: 0}
 --- !u!114 &270725589 stripped
@@ -433,7 +433,7 @@ Transform:
   - {fileID: 1034990393}
   - {fileID: 68613078}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470373342 stripped
 GameObject:
@@ -605,7 +605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &572845211 stripped
 MonoBehaviour:
@@ -1153,8 +1153,8 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
+  - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
   spawnSmoke: {fileID: 0}
 --- !u!1001 &1055721110
@@ -3324,7 +3324,7 @@ PrefabInstance:
     - target: {fileID: 8083190876493635492, guid: b84c2b468f52d2c4ba7e56954cd860bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8083190876493635492, guid: b84c2b468f52d2c4ba7e56954cd860bc,
         type: 3}
@@ -3455,8 +3455,8 @@ MonoBehaviour:
   spawnerList:
   - {fileID: 5113901532282581707, guid: 78f5324d663c4c84db753f51768bfb1d, type: 3}
   - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
-  - {fileID: 8137763823422728462, guid: 1274f188d9d4dce498b62bdcbd930ffb, type: 3}
+  - {fileID: 8137763823422728462, guid: 0f9b15410bd442b4192c733135cd5c21, type: 3}
+  - {fileID: 8137763823422728462, guid: 4614c1427d9714c4e9d362508fd15b1a, type: 3}
   uselessCount: 3
   spawnSmoke: {fileID: 0}
 --- !u!1 &1934654247
@@ -3500,7 +3500,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1982310467 stripped
 MonoBehaviour:
@@ -3614,7 +3614,7 @@ PrefabInstance:
     - target: {fileID: 8083190876493635492, guid: b84c2b468f52d2c4ba7e56954cd860bc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8083190876493635492, guid: b84c2b468f52d2c4ba7e56954cd860bc,
         type: 3}
@@ -3694,7 +3694,7 @@ PrefabInstance:
     - target: {fileID: 3833660642849613551, guid: dc38d8e72b255694ca130882ad96deb9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3833660642849613551, guid: dc38d8e72b255694ca130882ad96deb9,
         type: 3}
@@ -3837,7 +3837,7 @@ PrefabInstance:
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1657440222898587608, guid: cda08da8c0544904a99b091897872cc9,
         type: 3}
