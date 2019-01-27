@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Map
   - NPC
+  - TimerLabel
   layers:
   - Default
   - TransparentFX

@@ -56,30 +56,34 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(preGameTime > 2)
+        if (!lockCountdown)
         {
-            victoryText.text = "3!";
-        }
-        if(preGameTime < 2 && preGameTime > 1)
-        {
-            victoryText.text = "2!";
-        }
-        if (preGameTime < 1 && preGameTime > 0)
-        {
-            victoryText.text = "1!";
-        }
-        if (preGameTime < 0 && !lockCountdown)
-        {
-            victoryText.text = "Go!";
-            foreach(GameObject player in players)
+            if (preGameTime > 2)
             {
-                player.GetComponent<ThrowScript>()._isStunned = false;
+                victoryText.text = "3!";
             }
-        }
-        if(preGameTime < -1)
-        {
-            victoryText.text = "";
-            lockCountdown = true;
+            if (preGameTime < 2 && preGameTime > 1)
+            {
+                victoryText.text = "2!";
+            }
+            if (preGameTime < 1 && preGameTime > 0)
+            {
+                victoryText.text = "1!";
+            }
+            if (preGameTime < 0 && !lockCountdown)
+            {
+                victoryText.text = "Go!";
+                foreach (GameObject player in players)
+                {
+                    player.GetComponent<ThrowScript>()._isStunned = false;
+                }
+            }
+            if (preGameTime < -1)
+            {
+                //victoryText.text = "";
+                victoryText.enabled = false;
+                lockCountdown = true;
+            }
         }
 
         if (endCondition == timer.time)
@@ -119,9 +123,11 @@ public class GameManager : MonoBehaviour
             {
                 bestScore = house.Score;
                 bestScoreHouseId = house.Owner.GetComponent<ThrowScript>().playerNumber;
+                victoryText.color = house.GetComponent<SpriteRenderer>().color;
             }
         }
         victoryText.text = "Player " + bestScoreHouseId + " won!\nScore: " + bestScore;
+        
         victoryText.enabled = true;
 
         StartCoroutine(FinishGame());
@@ -129,7 +135,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FinishGame()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(0);
     }
 }
