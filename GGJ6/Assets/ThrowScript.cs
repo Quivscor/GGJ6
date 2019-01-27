@@ -67,7 +67,7 @@ public class ThrowScript : MonoBehaviour
                                 this.gameObject.GetComponentInChildren<PlayerAnimator>().CarryState();
                                 HeldGameObject = colliders[i].gameObject;
                                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = false;
-                                HeldGameObject.transform.position = this.gameObject.transform.position;
+                                HeldGameObject.transform.position = this.gameObject.transform.position + new Vector3(0,0.69f,0);
                                 HeldGameObject.transform.SetParent(this.gameObject.transform, true);
                                 HeldGameObject.transform.Translate(new Vector3(0.0f, 0.05f, 0.0f));
                                 HeldGameObject.SendMessage("OnPickUp", playerNumber);
@@ -97,7 +97,7 @@ public class ThrowScript : MonoBehaviour
     public void OnGettingHit(string type)
     {
         Debug.Log("Player" + playerNumber + " hit by " + type);
-        
+        float stunTime = 2.0f;
         if (type == "uselessFat")
         {
             this.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -106,10 +106,9 @@ public class ThrowScript : MonoBehaviour
         if (type == "uselessDrunk")
         {
             StartCoroutine(GetDrunk(5.0f));
-            StartCoroutine(GetStunned(0.2f));
-            return;
+            stunTime -= 1.2f;
         }
-        StartCoroutine(GetStunned(2f));
+        StartCoroutine(GetStunned(stunTime));
 
 
 
@@ -123,6 +122,7 @@ public class ThrowScript : MonoBehaviour
 
     IEnumerator GetStunned(float seconds)
     {
+        Debug.Log("Stunned for" +seconds);
 
         _isStunned = true;
         movementController.body.velocity = (Vector2.zero);
