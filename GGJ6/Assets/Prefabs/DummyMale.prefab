@@ -178,6 +178,7 @@ MonoBehaviour:
   waveLength: 0.1
   waving: 0
   waveLeft: 1
+  pickClip: {fileID: 8300000, guid: ef6e91d006635624ebaba518db82259d, type: 3}
   _isPickedUp: 0
   _isThrown: 0
 --- !u!50 &5769620924118062838
