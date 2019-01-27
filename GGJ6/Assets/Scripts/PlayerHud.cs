@@ -29,6 +29,16 @@ public class PlayerHud : MonoBehaviour
             hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p1");
     }
 
+    void ReserHudData()
+    {
+        hasChild.sprite = Resources.Load<Sprite>("FamilyIcons/d2");
+        hasMale.sprite = Resources.Load<Sprite>("FamilyIcons/t2");
+        hasFemale.sprite = Resources.Load<Sprite>("FamilyIcons/m2");
+        hasPet.sprite = Resources.Load<Sprite>("FamilyIcons/p2");
+
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +128,10 @@ public class PlayerHud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (House.isFullSet)
+        {
+            House.isFullSet = false;
+            ReserHudData();
+        }
     }
 }
