@@ -26,10 +26,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Play("Werq", 0.6f);
-    }
+    //private void Start()
+    //{
+    //    Play("Werq", 0.6f);
+    //}
 
     public void Play(string name, float volume = 1f)
     {

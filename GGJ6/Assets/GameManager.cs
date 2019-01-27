@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-
+        GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Werq", 0.6f);
         players[0].GetComponentInChildren<SpriteRenderer>().color = Color.red;
         players[0].GetComponent<ThrowScript>()._isStunned = true;
         //houses[0].Owner = players[0];

@@ -8,6 +8,8 @@ public class House : MonoBehaviour
     public delegate void ScoreChange();
     public static event ScoreChange OnChanged;
 
+    public int BigCheerAmount = 0;
+
     public int Score { get; set; }
 
     void UpdateScore(int amount)
@@ -17,6 +19,11 @@ public class House : MonoBehaviour
             Score += amount;
             if(amount > 0)
                 audioManager.Play("Points");
+            if(Score - BigCheerAmount >= 300)
+            {
+                audioManager.Play("Cheer1");
+                BigCheerAmount += 300;
+            }
         }
         else
         {
