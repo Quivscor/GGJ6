@@ -39,6 +39,7 @@ public class PlayerHud : MonoBehaviour
     {
         Component[] texts;
 
+
         //texts = GetComponentsInChildren(typeof(Text));
 
         //if (texts != null)
@@ -62,12 +63,13 @@ public class PlayerHud : MonoBehaviour
         //}
 
         playerName.text = "Player " + House.Owner.GetComponent<ThrowScript>().playerNumber;
+
         playerName.color = House.GetComponent<SpriteRenderer>().color;
         playerScore.text = 0.ToString();
 
         Component[] familyIcons;
 
-        familyIcons = GetComponentsInChildren(typeof(Image));
+        familyIcons = gameObject.GetComponentsInChildren(typeof(Image));
 
         if (familyIcons != null)
         {
@@ -82,7 +84,7 @@ public class PlayerHud : MonoBehaviour
         else
         {
             // Try again, looking for inactive GameObjects
-            Component[] familyIconsInactive = GetComponentsInChildren(typeof(Image), true);
+            Component[] familyIconsInactive = gameObject.GetComponentsInChildren(typeof(Image), true);
 
             foreach (Image familyIcon in familyIconsInactive)
             {

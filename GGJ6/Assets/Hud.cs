@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hud : MonoBehaviour
 {
     House[] houses = new House[4];
+    ThrowScript[] players = new ThrowScript[4];
 
     public GameObject hud1;
     public GameObject hud2;
@@ -24,6 +25,7 @@ public class Hud : MonoBehaviour
 
     void InitHuds()
     {
+
         //houses = GameObject.FindObjectsOfType<House>();
 
         //if (hud1 != null && houses.Length >= 1)
@@ -50,6 +52,7 @@ public class Hud : MonoBehaviour
         //    }
         //}
 
+
         //if (hud3 != null && houses.Length >= 3)
         //{
         //    foreach (House h in houses)
@@ -62,6 +65,7 @@ public class Hud : MonoBehaviour
         //    }
         //}
 
+
         //if (hud3 != null && houses.Length >= 4)
         //{
         //    foreach (House h in houses)
@@ -73,6 +77,7 @@ public class Hud : MonoBehaviour
         //        }
         //    }
         //}
+
 
         // if there is no house for a player, hide UI
         //if (hud1.GetComponent<PlayerHud>().House == null) hud1.SetActive(false);
