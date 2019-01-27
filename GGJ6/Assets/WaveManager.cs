@@ -12,6 +12,11 @@ public class WaveManager : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKey(KeyCode.F10))
+        {
+            EmergencyClear();
+        }
+
         if(!CheckIfWorthyNPCs())
         {
             _currentCooldown += Time.deltaTime;
@@ -47,6 +52,14 @@ public class WaveManager : MonoBehaviour
                 return true;
         }
         return false;
+    }
+
+    public void EmergencyClear()
+    {
+        foreach(GameObject npc in activeNPCs)
+        {
+            npc.GetComponent<NPC>().Remove();
+        }
     }
 
     public void RemoveNPC(GameObject npc)
