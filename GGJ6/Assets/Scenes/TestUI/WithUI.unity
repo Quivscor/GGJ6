@@ -16846,7 +16846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 1170871897}
   preGameTime: 0
-  endCondition: 
+  endCondition: 2:42
   victoryText: {fileID: 1667603905}
   houses:
   - {fileID: 1627578101}
