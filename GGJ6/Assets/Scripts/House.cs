@@ -38,7 +38,7 @@ public class House : MonoBehaviour
 
     // is there a complete set of family members?
     // types: pet, female, male, child
-    private bool isFullSet;
+    public bool isFullSet;
 
     public bool IsFullSet()
     {
@@ -67,9 +67,9 @@ public class House : MonoBehaviour
 
         if (hasFemale && hasMale && hasChild && hasPet)
         {
-            //isFullSet = true;
+            isFullSet = true;
             hasFemale = hasMale = hasChild = hasPet = false;
-            Score += 200;
+            UpdateScore(200);
             audioManager.Play("Cheer" + Random.Range(1, 2).ToString());
         }
     }
