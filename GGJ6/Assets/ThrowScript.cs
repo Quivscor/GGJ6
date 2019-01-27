@@ -79,6 +79,7 @@ public class ThrowScript : MonoBehaviour
             }
             else if(holdsSth == true)
             {
+                this.gameObject.GetComponentInChildren<PlayerAnimator>().Throw();
                 //Debug.Log("Player" + playerNumber+ "throws held NPC");
                 HeldGameObject.transform.position = this.gameObject.transform.position;
                 HeldGameObject.GetComponent<Rigidbody2D>().simulated = true;
